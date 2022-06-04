@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Desafio entregable #2</h1>
+    <h2>Ejercicio #1</h2>
+    <form action="">
+        <label for="number">Ingrese un numero decimal</label>
+        <input type="number" step="0.01" name="number" id="numero">
+        <button id='button' type="button" onclick="onClickRound()">Resolver</button>
+        <p id='resultado'> </p>
+   
+        <h2>Ejercicio #2</h2>
+    
+        <h4>Ingresa el valor de un producto y el iva, devuelve el precio final del producto</h4>
+        <label for="cantidad">Ingrese el valor de su producto</label>
+        <input type="number" step="0.01" name="cantidad" id="cantidad">
+        <label for="tax">ingrese el porcentaje de iva</label>
+        <input type="number" step="0.01" name="tax" id="tax" min="0.01" max="100">
+        <button id='button' type="button" onclick="onClickTax()">Calcular</button>
+        <p id='resultado_2'> </p>
+
+        <h2>Ejercicio #3</h2> 
+
+        <h4>Convierte los pesos a dolares</h4>
+        <label for="pesos">Ingrese sus pesos</label>
+        <input type="number" step="0.01" name="pesos" id="pesos">
+        <button id='button' type="button" onclick="onClickDolar()">Calcular</button>
+        <p id='resultado_3'> </p>
+
+        <label for="dolar">Ingrese sus dolares</label>
+        <input type="number" step="0.01" name="dolar" id="dolar">
+        <button id='button' type="button" onclick="onClickPesos()">Calcular</button>
+        <p id='resultado_4'> </p>
+
+        
+
+    </form>
+    <script src="./App.js"></script>
+</body>
+</html>
