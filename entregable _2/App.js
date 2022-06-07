@@ -34,3 +34,13 @@ function onClickPesos() {
 
     $.getElementById('resultado_4').innerHTML = `${dolar} dolares son ${conversion} pesos`
 }
+
+let round = $.getElementById('btnRound')
+let tax = $.getElementById('btnTax')
+let dolar = $.getElementById('btnDolar')
+let pesos = $.getElementById('btnPeso')
+
+round.addEventListener('click', onClickRound)
+tax.addEventListener('click', onClickTax)
+dolar.addEventListener('click', onClickDolar)
+pesos.addEventListener('click', onClickPesos)
