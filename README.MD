@@ -18,3 +18,11 @@ presenta por pantalla
 2. Se ingresa el precio y iva de un producto y presanta por pantalla el precio, el iva y cuanto es el precio final del producto
 
 3. Una cotizacion de pesos a dolares y de dolares a pesos: multiplica 120.61 (1 dolar son 120.61 pesos) por la cantidad de dolares ingresados y lo presenta por pantalla
+
+# DESAFIO ENTREGABLE #3
+
+1.Declarar un clase Tienda que permita registrar:
+Nombre de la tienda.
+Dirección de la tienda.
+Propietario de la tienda.
+Rubro de la tienda.
