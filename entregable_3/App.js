@@ -18,7 +18,7 @@ function createShop() {
     const products = $.getElementById('product').value
 
     if (!nameStore ) {
-        console.log('y el nombre perro?')
+        console.log('y el nombre?')
     }
     else if (!address) {
         console.log('y la direccion?')
@@ -32,7 +32,7 @@ function createShop() {
     else {
         const nameStores = Object.keys(tiendas)
         if (!nameStores.includes(nameStore)) {
-            console.log('exito perro')
+            console.log('exito ')
             tiendas[nameStore] = new store(products, address, propietary)
         }else {
             console.log('ya existe')
