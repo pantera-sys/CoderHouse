@@ -42,21 +42,21 @@ function createShop() {
 
 
 
-function showInformation() {
-    const informacion = $.getElementById('info')
-    const datos = []
-    tiendas.map(function(tienda) {
-        tienda.map(function(info) {
-            datos.push(`<h3>${info.nameStore}</h3>
-            <p>${info.address}</p>
-            <p>${info.propietary}</p>
-            <p>${info.products}</p>`)
-        }
-    )
-    }
-    )
-    informacion.innerHTML = [...datos]
-}
+// function showInformation() {
+//     const informacion = $.getElementById('info')
+//     const datos = []
+//     tiendas.map(function(tienda) {
+//         tienda.map(function(info) {
+//             datos.push(`<h3>${info.nameStore}</h3>
+//             <p>${info.address}</p>
+//             <p>${info.propietary}</p>
+//             <p>${info.products}</p>`)
+//         }
+//     )
+//     }
+//     )
+//     informacion.innerHTML = [...datos]
+// }
 
 const btnShop = $.getElementById('btnShop')
 const btnShow = $.getElementById('btnShow')
