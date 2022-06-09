@@ -7,7 +7,7 @@ class store {
     }
 }
 
-let tiendas = []
+let tiendas = {}
 
 const $ = document
 
