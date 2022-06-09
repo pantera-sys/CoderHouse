@@ -4,23 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <h2>Ejercicio #1</h2>
     <form action="">
-        <label for="shop">Ingrese el nombre de la tienda</label>
-        <input type="text" name="shop" id="shop" required>
-        <label for="propietary">Ingrese el nombre del propietario</label>
-        <input type="text" name="propietary" id="propietary" required>
-        <label for="address">Ingrese la dirección</label>
-        <input type="text" name="address" id="address" required>
-        <label for="product">Que vende el local</label>
-        <input type="text" name="product" id="product" required>
+        <div class="container-input">
+            <label for="shop">Ingrese el nombre de la tienda</label>
+            <input type="text" name="shop" id="shop" required>
+        </div>
+        <div class="container-input">
+            <label for="propietary">Ingrese el nombre del propietario</label>
+            <input type="text" name="propietary" id="propietary" required>
+        </div>
+        <div class="container-input">
+            <label for="address">Ingrese la dirección</label>
+            <input type="text" name="address" id="address" required>
+        </div>
+        <div class="container-input">
+            <label for="product">Que vende el local</label>
+            <input type="text" name="product" id="product" required>
+        </div>
         
-        <button type="button" id="btnShop">Enviar</button>
-        <button type="button" id="btnShow">mostrar informacion</button>
+        <button type="button" id="btnShop" >Enviar</button>
+        <button type="button" id="btnShow" >mostrar informacion</button>
 
         <p id="info"></p>
 
