@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+html{
+    font-size: 62.5%;
+}
+
 /* centrar elementos del body */
 body {
     margin: auto;
@@ -27,3 +31,51 @@ button  {
     border-radius: 3px;
 }
 
+#info{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.container__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.container__store{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0px 20px;
+    border-radius: 10px;
+    background-color: peru;
+}
+
+#infoProducts{
+    width: 100%;
+    height: auto;
+}
+
+.container__store h2{
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+.container__store button{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.container_elements{
+    width: 100%;
+    height: 40px;
+    background-color: greenyellow;
+}

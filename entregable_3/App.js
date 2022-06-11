@@ -1,6 +1,6 @@
 class store {
-    constructor( products, address, propietary) {
-        
+    constructor( nameStore,products, address, propietary) {
+        this.nameStore = nameStore;
         this.products = products;
         this.address = address;
         this.propietary = propietary;
@@ -8,7 +8,7 @@ class store {
 }
 
 
-
+let stores = []
 const $ = document
 
 function createShop() {
@@ -17,7 +17,7 @@ function createShop() {
     const propietary = $.getElementById('propietary').value
     const products = $.getElementById('product').value
 
-    let tiendas = []
+    
     if (!nameStore ) {
         console.log('y el nombre?')
     }
@@ -31,12 +31,11 @@ function createShop() {
         console.log('y los productos?')
     }
     else {
-        const names = tiendas?.map(tiendas => console.log(tiendas))
-        console.log(names)
-        if (nameStore.includes(names)) {
-            const shop = new store(products, address, propietary)
-            tiendas.push(shop)
-            console.log(tiendas)
+        const registeredStores = stores.map(stores => stores.nameStore)
+        if (!registeredStores.includes(nameStore)) {
+            const shop = new store(nameStore ,products, address, propietary)
+            stores.push(shop)
+            console.log(stores)
         }else{
             console.log('ya existe')
         }
@@ -44,34 +43,67 @@ function createShop() {
 }
 
 
+function showInformation() {
+    const information = $.getElementById('info')
+    const datos = []
+    
+    stores.map(store => {
+        const divContainer = $.createElement('div')
+        divContainer.classList.add('container__info')
 
-// function showInformation() {
-//     const informacion = $.getElementById('info')
-//     const datos = []
-//     tiendas.map(function(tienda) {
-//         tienda.map(function(info) {
-//             datos.push(`<h3>${info.nameStore}</h3>
-//             <p>${info.address}</p>
-//             <p>${info.propietary}</p>
-//             <p>${info.products}</p>`)
-//         }
-//     )
-//     }
-//     )
-//     informacion.innerHTML = [...datos]
-// }
+        const title = $.createElement('h2')
+        title.textContent = store.nameStore
+
+        const button = $.createElement('button')
+        button.textContent = 'Ver productos'
+        button.addEventListener('click', () => {
+            showProducts(store)
+        })
+
+        const div1 = $.createElement('div')
+        div1.classList.add('container__store')
+        div1.append(title, button)
+
+        const div2 = $.createElement('div')
+        div2.id = 'infoProducts'
+
+        divContainer.append(div1, div2)
+        datos.push(divContainer)
+    })
+    information.innerHTML = ''
+    information.append(...datos)
+    console.log(datos)
+    console.log(stores)
+
+    
+}
+
+function showProducts({products, propietary, address, }) {
+    const infoProducts = $.getElementById('infoProducts')
+    const divContainer = $.createElement('div')
+    divContainer.classList.add('container-info-products')
+
+    const elements = `
+        <div class="container_elements">
+            <p>Producto: </p><span>${products}</span>
+        </div>
+        <div class="container_elements">
+            <p>Propietario: </p><span>${propietary}</span>
+        </div>
+        <div class="container_elements">
+            <p>Direccion: </p><span>${address}</span>
+        </div>
+    `
+    infoProducts.innerHTML = elements
+
+    const button = $.createElement('button')
+}
+
 
 const btnShop = $.getElementById('btnShop')
-// const btnShow = $.getElementById('btnShow')
+const btnShow = $.getElementById('btnShow')
 
-// btnShow.addEventListener('click', showInformation)
+btnShow.addEventListener('click', showInformation)
 btnShop.addEventListener('click', createShop)
 
 
-// const nameStores = Object.keys(tiendas)
-        // if (!nameStores.includes(nameStore)) {
-        //     console.log('exito ')
-        //     tiendas[nameStore] = new store(products, address, propietary)
-        // }else {
-        //     console.log('ya existe')
-        // }
