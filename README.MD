@@ -26,3 +26,10 @@ Nombre de la tienda.
 Dirección de la tienda.
 Propietario de la tienda.
 Rubro de la tienda.
+y despues presentarlo por pantalla
+
+2. un filtro que presente por pantalla, lo que el usuario desee
+Precio
+tipo de producto
+si se encuentra disponible
+el stock del producto

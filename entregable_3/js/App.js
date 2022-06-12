@@ -74,16 +74,15 @@ function showInformation() {
     information.append(...datos)
     console.log(datos)
     console.log(stores)
-
-    
 }
 
-function showProducts({products, propietary, address, }) {
+function showProducts({products, propietary, address}) {
     const infoProducts = $.getElementById('infoProducts')
     const divContainer = $.createElement('div')
     divContainer.classList.add('container-info-products')
 
     const elements = `
+    
         <div class="container_elements">
             <p>Producto: </p><span>${products}</span>
         </div>
@@ -93,28 +92,30 @@ function showProducts({products, propietary, address, }) {
         <div class="container_elements">
             <p>Direccion: </p><span>${address}</span>
         </div>
+    
     `
     infoProducts.innerHTML = elements
 }
 
 function displayProductsInformation(obj) {
     const infoProducts = $.getElementById('infoProducts')
-    const divContainer = $.createElement('div')
-    divContainer.classList.add('container-info-products')
+    infoProducts.innerHTML = ''
 
-    const elements = `
-        <div class="container_elements">
-            <p>Producto: </p><span>${obj.name}</span>
-        </div>
-        <div class="container_elements">
-            <p>Precio: </p><span>${obj.price}</span>
-        </div>
-        <div class="container_elements">
-            <p>Cantidad: </p><span>${obj.amaount}</span>
-        </div>
-        
+    obj.map(({name, price, amaount}) => {
+        infoProducts.innerHTML += `
+        <section class="container__info-products">
+            <div class="container_elements">
+                <p>Producto: </p><span>${name}</span>
+            </div>
+            <div class="container_elements">
+                <p>Precio: </p><span>${price}</span>
+            </div>
+            <div class="container_elements">
+                <p>Cantidad: </p><span>${amaount}</span>
+            </div>
+        </section>
     `
-    infoProducts.innerHTML = elements
+    })
 }
 
 function filter() {
@@ -126,7 +127,7 @@ function filter() {
     })
 
    console.log(filtered)
-  displayProductsInformation(filtered[0])
+    displayProductsInformation(filtered)  
    
 }
 

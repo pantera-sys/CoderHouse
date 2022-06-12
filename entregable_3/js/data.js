@@ -31,7 +31,7 @@ const bisuteria = [
         name : 'cadena',
         price : '$300',
         availability : 'no',
-        amaount : '30',
+        amaount : '0',
         features : ['negra', 'grande', 'bolitas'],
     }
 ]
