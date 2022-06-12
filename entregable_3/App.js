@@ -95,15 +95,76 @@ function showProducts({products, propietary, address, }) {
         </div>
     `
     infoProducts.innerHTML = elements
-
-    const button = $.createElement('button')
 }
+
+function displayProductsInformation(obj) {
+    const infoProducts = $.getElementById('infoProducts')
+    const divContainer = $.createElement('div')
+    divContainer.classList.add('container-info-products')
+
+    const elements = `
+        <div class="container_elements">
+            <p>Producto: </p><span>${obj.name}</span>
+        </div>
+        <div class="container_elements">
+            <p>Precio: </p><span>${obj.price}</span>
+        </div>
+        <div class="container_elements">
+            <p>Cantidad: </p><span>${obj.amaount}</span>
+        </div>
+        
+    `
+    infoProducts.innerHTML = elements
+}
+
+function filter() {
+    const search = $.getElementById('search').value
+    const select = $.getElementById('select').value
+    const filtered = bisuteria.filter((obj) => {
+      const filter = obj[select].includes(search)
+      return filter;
+    })
+
+   console.log(filtered)
+  displayProductsInformation(filtered[0])
+   
+}
+
 
 
 const btnShop = $.getElementById('btnShop')
 const btnShow = $.getElementById('btnShow')
+const btnFilter = $.getElementById('btnFilter')
+
 
 btnShow.addEventListener('click', showInformation)
 btnShop.addEventListener('click', createShop)
+btnFilter.addEventListener('click', filter)
 
 
+// function filter() {
+//     const search = $.getElementById('search').value
+//     const select = $.getElementById('select').value
+//     let filtered = []
+
+//     switch (select) {
+//         case 'product':
+//             filtered = bisuteria.filter( ({name}) => name.includes(search))
+//             break;
+//         case 'price':
+//             filtered = bisuteria.filter( ({price}) => price.includes(search))
+//             break;  
+//         case 'availability':
+//             filtered = bisuteria.filter( ({availability}) => availability.includes(search))
+//             break;
+//         case 'amaount':
+//             filtered = bisuteria.filter( ({amaount}) => amaount.includes(search))
+//             break;
+//         case 'features':
+//             filtered = bisuteria.filter( ({features}) => features.includes(search))
+//             break;
+//         default:
+//             console.log('no seleccionaste nada');
+//             break;
+//     }
+// }

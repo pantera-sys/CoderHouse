@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta autor="Jose Naranjo" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -32,6 +33,29 @@
     </form>
 
     <div id="info"></div>
+    <h2>Ejercicio #2</h2>
+    <form action="">
+        
+        <!-- selector de multiple opcion -->
+        <div class="container-input">
+            <label for="select">Seleccione el tipo de busqueda</label>
+            <select name="select" id="select">
+                <option value="name">tipo de producto</option>
+                <option value="price">Precio</option>
+                <option value="availability">disponible</option>
+                <option value="amaount">Cantidad</option>
+            </select>
+                <label for="search">Ingrese lo que desee buscar</label>
+                <input type="text" name="search" id="search"  required>
+        </div>
+        <button type="button" id="btnFilter" >Buscar</button>
+        
+    </form>
+    <div id="infoProducts">
+        
+    </div>
+
+    <script src="./data.js"></script>
     <script src="./App.js"></script>
 </body>
 </html>
