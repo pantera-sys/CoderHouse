@@ -19,7 +19,7 @@ presenta por pantalla
 
 3. Una cotizacion de pesos a dolares y de dolares a pesos: multiplica 120.61 (1 dolar son 120.61 pesos) por la cantidad de dolares ingresados y lo presenta por pantalla
 
-# DESAFIO ENTREGABLE #3
+# Posible proyecto Final - entregable #3
 
 1.Declarar un clase Tienda que permita registrar:
 Nombre de la tienda.
@@ -28,8 +28,16 @@ Propietario de la tienda.
 Rubro de la tienda.
 y despues presentarlo por pantalla
 
-2. un filtro que presente por pantalla, lo que el usuario desee
+2.Un filtro que presente por pantalla, lo que el usuario desee
 Precio
 tipo de producto
 si se encuentra disponible
 el stock del producto
+
+# DESAFIO ENTREGABLE #4
+
+### Botones
+
+1.  el cual muestra por pantalla la informacion almacenada
+
+2. Prensenta un pequeño formulario para ingresar un nuevo producto a la data

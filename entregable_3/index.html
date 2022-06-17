@@ -14,19 +14,19 @@
     <form action="">
         <div class="container-input">
             <label for="shop">Ingrese el nombre de la tienda</label>
-            <input type="text" name="shop" id="shop"  required>
+            <input type="text"  class="input" name="shop" id="shop"  required>
         </div>
         <div class="container-input">
             <label for="propietary">Ingrese el nombre del propietario</label>
-            <input type="text" name="propietary" id="propietary"  required>
+            <input type="text" class="input"  name="propietary" id="propietary"  required>
         </div>
         <div class="container-input">
             <label for="address">Ingrese la dirección</label>
-            <input type="text" name="address" id="address"  required>
+            <input type="text"  class="input" name="address" id="address"  required>
         </div>
         <div class="container-input">
             <label for="product">Que vende el local</label>
-            <input type="text" name="product" id="product"  required>
+            <input type="text" class="input"  name="product" id="product"  required>
         </div>
         
         <button type="button" class="button__send" id="btnShop" >Enviar</button>
@@ -47,16 +47,14 @@
                 <option value="amaount">Cantidad</option>
             </select>
                 <label for="search">Ingrese lo que desee buscar</label>
-                <input type="text" name="search" id="search"  required>
+                <input type="text" class="input" name="search" id="search"  required>
         </div>
         <button type="button" class="button__send" id="btnFilter" >Buscar</button>
         
     </form>
-    <div id="infoProducts">
-
-    </div>
-
+    <div id="infoProducts"></div>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script src="./js/data.js"></script>
     <script src="./js/App.js"></script>
-</body>
 </html>

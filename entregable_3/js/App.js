@@ -19,25 +19,27 @@ function createShop() {
 
     
     if (!nameStore ) {
-        console.log('y el nombre?')
+        swal('ERROR!','Falta el nombre','error' )
     }
     else if (!address) {
-        console.log('y la direccion?')
+        swal('ERROR!','Falta la direccion','error' )
     }
     else if (!propietary) {
-        console.log('y el propietario?')
+        swal('ERROR!','Falta el propietario','error' )
     }
     else if (!products) {
-        console.log('y los productos?')
+        swal('ERROR!','Falta el producto','error' )
     }
     else {
         const registeredStores = stores.map(stores => stores.nameStore)
         if (!registeredStores.includes(nameStore)) {
+            
             const shop = new store(nameStore ,products, address, propietary)
             stores.push(shop)
             console.log(stores)
+            swal('Bien hecho', 'Tienda creado con exito', 'success')
         }else{
-            console.log('ya existe')
+            swal('ERROR!','Esta tienda ya existe','error' )
         }
     }   
 }
