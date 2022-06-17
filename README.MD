@@ -41,3 +41,11 @@ el stock del producto
 1.  el cual muestra por pantalla la informacion almacenada
 
 2. Prensenta un pequeño formulario para ingresar un nuevo producto a la data
+
+# DESAFIO ENTREGABLE #5 
+
+evento de tipo 
+```Js
+tecla.onkeyup(() => {})
+```
+un filtro mas dinamico para las busquedas junto a un boton que limpia la pantalla

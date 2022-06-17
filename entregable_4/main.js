@@ -47,15 +47,15 @@ function showForm() {
         <form>
         <div class="container-input">
             <label for="name">Nombre</label>
-            <input type="text" id="name" name="name" placeholder="Nombre">
+            <input type="text" id="name" name="name" placeholder="Nombre" required>
         </div>
         <div class="container-input">
             <label for="price">Precio</label>
-            <input type="text" id="price" name="price" placeholder="Precio">
+            <input type="text" id="price" name="price" placeholder="Precio" required>
         </div>
         <div class="container-input">
             <label for="amount">Cantidad</label>
-            <input type="text" id="amount" name="amount" placeholder="Cantidad">
+            <input type="text" id="amount" name="amount" placeholder="Cantidad" required>
         </div>
             <button  id="submit" class='button__send'>Agregar</button>
         </form>
