@@ -114,6 +114,12 @@ const printFooter = () => {
         const btnEmpty = document.getElementById('emptyCart')
         btnEmpty.addEventListener('click', () => {
             cart = {}
+            Swal.fire({
+                title: 'Información',
+                text: 'El carrito se ha vaciado',
+                icon: 'info',
+                confirmButtonText: 'Ok'
+              })
             paintshopCart()
         })
     }

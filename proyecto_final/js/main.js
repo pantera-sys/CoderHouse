@@ -27,10 +27,8 @@ const fetchdata = async () => {
 }
 
 function displayProductsInformation(obj) {
-	console.log(obj)
     App.innerHTML = ''
     obj.map(({source, description, price}) => {
-		
         App.innerHTML += `
         <div class="col " >
 		<div class="card shadow-sm" > 
