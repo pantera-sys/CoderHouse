@@ -10,7 +10,21 @@ window.onscroll = () => {
 
 const $ = document
 const App = $.getElementById('App')
-let carProducts = []
+
+$.addEventListener('DOMContentLoaded', () => {
+	fetchdata()
+})
+
+const fetchdata = async () => {
+	try {
+		const response = await fetch('./js/api.json')
+		const data = await response.json()
+		displayProductsInformation(data)
+		Filter(data)
+	} catch (error) {
+		console.log(error)
+	}
+}
 
 function displayProductsInformation(obj) {
 	console.log(obj)
@@ -25,38 +39,25 @@ function displayProductsInformation(obj) {
 			<p class="card-text">${description}</p>
 			<div class="d-flex justify-content-between align-items-center">
 				<div class="btn-group">
-				<button id='buy' type="button" class="btn btn-sm btn-outline-primary">Add to cart</button>
 				</div>
-				<small class="fw-bold">${price}</small>
+				<p class="fw-bold">$<small class="fw-bold">${price}</small></p>
 			</div>
 			</div>
 		</div>
 		</div>
     `
     })
-
-	const buy = document.getElementById('buy')
-	buy.onclick = () => {
-		console.log('click')
-		const product = {
-			source,
-			description,
-			price
-		}
-		console.log(product)
-	}
-
 }
 
-const input1 = $.getElementById('name')
-input1.onkeyup =  () => {
-	const value = input1.value
-	// console.log(input1.value);
-    const filtered = infoCards.filter((obj) => {
-      const filter = obj.name.includes(value)
-	  return filter;
-      })  
-	  console.log(filtered, 'filtrado');
-    displayProductsInformation(filtered)
+function Filter(data) {
+	const input1 = $.getElementById('name')
+	input1.onkeyup =  () => {
+		const value = input1.value
+		const filtered = data.filter((obj) => {
+			const filter = obj.name.includes(value)
+			return filter;
+		})  
+		displayProductsInformation(filtered)
+	
 }
-
+}

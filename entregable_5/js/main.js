@@ -44,10 +44,4 @@ input1.onkeyup =  () => {
     
 }
 
-// $.body.addEventListener('click', (e) => {
-//     if (e.target.id === 'clean') {
-//         App.innerHTML = ''
-//     }        
-// }
-// )
 
