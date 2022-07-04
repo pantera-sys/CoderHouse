@@ -27,8 +27,9 @@ items.addEventListener('click', (e) => {
 const fetchData = async () => {
     try {
         const response = await fetch('./js/api.json')
-        const data = await response.json();
+        const data = await response.json()
         printCards(data)  
+        return data
     } catch (error) {
         console.log(error)
     }
@@ -48,19 +49,25 @@ const printCards = (data) => {
     cards.appendChild(fragment)
 }
 
-const addCart = e => {
+const addCart = async (e) => {
     if (e.target.classList.contains('btn-dark')) {
-        setCart(e.target.parentElement)
+        try {
+            const response = await fetch('./js/api.json')
+            const data = await response.json()
+            let obj = data.find(({id}) => id == e.target.dataset.id)
+            setCart(obj)
+        } catch (error) {
+            console.log(error)
+        }
     }
-    e.stopPropagation()
 }
 
 const setCart = obj => {
-    // console.log(obj);
+    console.log(obj);
     const product = {
-        id: obj.querySelector('button').dataset.id,
-        name: obj.querySelector('h5').textContent,
-        price: obj.querySelector('span').textContent,
+        id: obj.id,
+        name: obj.name,
+        price: obj.price,
         amount: 1
     }
     if (cart.hasOwnProperty(product.id)) {
